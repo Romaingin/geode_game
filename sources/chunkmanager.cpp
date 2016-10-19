@@ -14,7 +14,7 @@ ChunkManager::ChunkManager (int se, int s, double sp, int dr)
 	space = sp;
 	displayRange = dr;
 
-	terrainShaderProgram = new ShaderProgram("shaders/terrain.vert", "shaders/terrain.frag", "shaders/terrain.geo");
+	terrainShaderProgram = new ShaderProgram("shaders/simple.vert", "shaders/simple.frag", "shaders/simple.geo");
 
 	// Declare uniforms
 	char const *uniforms[] = {"projection_matrix", "view_matrix", "model_matrix"};

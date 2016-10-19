@@ -26,7 +26,7 @@ bool GenerateTerrain(int x, int y, int size, float space,
 	vector<vec3> &outVertices,
 	vector<unsigned int> &outIndices)
 {
-	PerlinNoise noiseGen = PerlinNoise(250);
+	PerlinNoise noiseGen = PerlinNoise(1000);
 	double scalingFactor = 0.015;
 
 	for (int j = 0; j < size; j++)

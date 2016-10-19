@@ -11,10 +11,11 @@ using namespace glm;
 
 Camera::Camera()
 {
-	Position = vec3(5,80,5);
+	Position = vec3(40,10,5);
 	AimVect = normalize(vec3(5,-1,5));
 	Up = vec3(0,1,0);
-	ProjectionMatrix = perspective(radians(45.0f), 4.0f / 3.0f, 0.1f, 1000.0f);
+	// TODO
+	ProjectionMatrix = perspective(radians(45.0f), 1280.0f/720.0f, 0.1f, 1000.0f);
 
 	mouseSensivity = 0.008f;
 	speed = 3.0f;

@@ -26,6 +26,7 @@ bool Program::Init()
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
+	// Create the window
 	window = glfwCreateWindow( windowWidth, windowHeight, "Application", NULL, NULL);
 	if( window == NULL ){
 		fprintf( stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible." );
@@ -78,6 +79,7 @@ bool Program::Init()
 
 void Program::Run()
 {
+	// Main loop
 	do{
 		// Time settings
 		int dt = timer->GetDelaTimeMs();
@@ -96,6 +98,7 @@ void Program::Run()
 	while( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
 			glfwWindowShouldClose(window) == 0 );
 
+	// Exit properly
 	statemanager->Clean();
 	fprintf(stderr, "Cleaned\n");
 

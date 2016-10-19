@@ -12,7 +12,7 @@ void GameState::Init()
 	camera = new Camera();
 
 	// Create scene
-	chunkmanager = new ChunkManager(501, 60, 2.0, 1);
+	chunkmanager = new ChunkManager(11, 60, 2.0, 0);
 	chunkmanager->RefreshAll(camera->GetPosition());
 }
 
